@@ -1,0 +1,5 @@
+Word2vec implementation based on the first assignment from cs224n (stanford)
+
+Written solution (+gradient derivation) can be found in sol.pdf
+
+The evolution of the training cost is plotted in word2vec_training_cost_evolution.png
