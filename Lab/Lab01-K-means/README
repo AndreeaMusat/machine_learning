@@ -1,0 +1,4 @@
+
+Usage: python k_means.py <dataset_name> <num_clusters>
+
+where dataset_name can be chosen from FCPS/01FCPS/data (Atom, EngyTime, Hepta, Tetra etc)
