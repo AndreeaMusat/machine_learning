@@ -1,0 +1,1 @@
+Usage: python decision_trees.py classes_file attr_file data_file [random_tree|id3_tree|random_forest|id3_forest]
