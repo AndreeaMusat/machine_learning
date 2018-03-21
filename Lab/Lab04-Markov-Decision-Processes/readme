@@ -1,0 +1,2 @@
+Usage:
+python3 markov_process.py --map-name [simple|complex|suffer|be_careful] --gamma <float between 0 and 1> --max-delta <small float for convergence test>
