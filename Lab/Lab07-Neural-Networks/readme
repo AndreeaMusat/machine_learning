@@ -1,0 +1,7 @@
+See gradients.jpg for derivation of the formulae used in the backward pass
+
+Required packages: python-mnist
+
+Usage: python train.py
+
+test accuracy on mnist ~0.83
