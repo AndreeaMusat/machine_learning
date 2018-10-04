@@ -6,24 +6,10 @@ import tensorflow as tf
 from sklearn.metrics import confusion_matrix
 from sys import exit
 
-"""
-Returns (x_train, y_train), (x_test, y_test)
-
-x_train.shape = (num_training_examples, img_w, img_h, num_channels) or
-				(num_training_examples, img_w, img_h) if num_channels = 1
-y_train.shape = (num_training_examples, )
-"""
-def load_data(dataset_name):
-	if dataset_name == 'mnist':
-		return tf.keras.datasets.mnist.load_data()
-	elif dataset_name == 'cifar10':
-		return tf.keras.datasets.cifar10.load_data()
-	else:
-		exit('[ERROR] Unknown dataset.')
-
-
 if __name__ == '__main__':
-	(x_train, y_train), (x_test, y_test) = load_data('mnist')
+	# x_train.shape = (num_training_examples, img_w, img_h, num_channels)
+	# y_train.shape = (num_training_examples, )
+	(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
 	# Number of unique labels in our training data.
 	num_classes = np.unique(y_train).size
@@ -96,7 +82,7 @@ if __name__ == '__main__':
 			session.run(optimizer, feed_dict=feed_dict_train)
 
 	def print_accuracy():
-		feed_dict_test = {x : x_test, y_true : y_test_one_hot, y_true_cls : y_test}
+		feed_dict_test = {x : x_test, y_true : y_test_one_hot, y_true_cls : y_test[:]}
 		acc = session.run(accuracy, feed_dict=feed_dict_test)
 		print("accuracy:", acc)
 		return acc
