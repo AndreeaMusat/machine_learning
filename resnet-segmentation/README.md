@@ -1,5 +1,10 @@
 # (A quite unsuccessful attempt to do) Image Segmentation Using ResNet
 
+## Usage:
+```
+python conv_net.py
+```
+
 ## Results:
 
 ### Original | Ground truth   | Result
